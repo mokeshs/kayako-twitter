@@ -1,7 +1,7 @@
 Kayako-Twitter
 ==============
 
-A simple Twitter API client in PHP for Kayako that fetches and displays Tweets those 
+A simple Twitter API client in PHP that fetches and displays Tweets those 
 * a) Have been re-Tweeted at least once and 
 * b) Contain the hashtag #custserv
 
@@ -35,7 +35,7 @@ A simple Twitter API client in PHP for Kayako that fetches and displays Tweets t
 * All the tweets will be displayed
 
 ### Testing
-* Run `phpunit` / `vendor/phpunit/phpunit/phpunit` in source directory home
+* Run `phpunit` OR `vendor/phpunit/phpunit/phpunit` in source directory home
 * Test Coverage Reports will be available in ``build`` directory
 
 ### Known Issue
