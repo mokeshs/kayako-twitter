@@ -1,0 +1,8 @@
+build/logs
+build/coverage
+vendor/
+
+# vim swp files
+*.swp
+*.swo
+

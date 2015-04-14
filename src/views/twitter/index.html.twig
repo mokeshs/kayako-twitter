@@ -1,0 +1,58 @@
+{# 
+/**
+ * Extend Base layout 
+ * @see layout.html.twig
+ * @see http://twig.sensiolabs.org/doc/templates.html
+ */
+#}
+{% extends 'layout.html.twig' %}
+
+{# Add Page Meta #}
+{% block page_meta %} 
+    <meta name="description" content="Kayako Twitter Client">
+    <meta name="keywords" content="Kayako, Twitter">
+{% endblock %}
+
+{# Override Page Title #}
+{% block title %} Kayako Twitter Client{% endblock %}
+
+{% block head_stylesheet %}
+    {{ parent() }}
+    <link href="css/progressbar.css" rel="stylesheet" />
+{% endblock %}
+{% block head_javascript %}
+    <script type="text/javascript" src="js/pace.min.js"></script>
+{% endblock %}
+
+{# Body Content #}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1><span class="text-info"><b>Kayako</b></span> <small> Twitter Client</small></h1>
+            </div>
+        </div>
+        <hr>
+        <div id="tweet-template" class="hidden">
+            <div class="col-md-6">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h4><span class="tweet-owner-name"></span><span class="tweet-owner-handler"></span></h4>
+                    </div>
+                    <div class="panel-body">
+                        <p class="tweet"></p>
+                        <p class="text-primary">
+                            <span title="Retweet Count" class="glyphicon glyphicon-retweet" aria-hidden="true"></span>
+                            <span title="Retweet Count" class="retweet-count"></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block foot_javascript %}
+    {{ parent() }}
+    <script type="text/javascript" src="js/home.js"></script>
+{% endblock %}

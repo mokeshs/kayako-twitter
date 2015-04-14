@@ -1,0 +1,27 @@
+{
+    "name": "mukesh/kayako-twitter",
+    "description" : "A Simple Twitter Client Application for Kayako",
+    "type": "project",
+    "license": "MIT",
+    "prefer-stable": true,
+    "authors": [
+        {
+            "name": "Mukesh Sharma",
+            "email": "cogentmukesh@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3",
+        "abraham/twitteroauth": "0.5.2",
+        "silex/silex": "1.2.3",
+        "twig/twig": "1.18.0",
+        "predis/predis": "1.0.1",
+        "phpunit/phpunit": "4.5.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kayako\\": "src/core",
+            "Kayako\\Twitter\\": "src/modules/twitter"
+        }
+    }
+}

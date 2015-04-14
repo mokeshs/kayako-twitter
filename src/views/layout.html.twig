@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{# 
+/**
+ * Base Template
+ * Extend this to the create custom views.
+ *
+ * @author Mukesh Sharma <cogentmukesh@gmail.com>
+ * @see http://twig.sensiolabs.org/doc/templates.html
+ */
+#}
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        {% block page_meta %} {% endblock %}
+        <meta name="author" content="Mukesh Sharma">
+        
+        <title>{% block title %} {# Override this in child templates to add title #} {% endblock %}</title>
+        
+        {% block head_stylesheet %} 
+            <link href="css/bootstrap.min.css" rel="stylesheet">
+            <link href="css/home.css" rel="stylesheet">
+        {% endblock %}
+        
+        {% block head_javascript %} {% endblock %}
+    </head>
+    <body>
+        <div id="content">
+            {% block content %}{% endblock %}
+        </div>
+        {% block foot_javascript %} 
+            <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+            <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        {% endblock %}
+    </body>
+</html>
